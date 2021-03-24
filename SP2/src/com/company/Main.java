@@ -10,8 +10,8 @@ public class Main {
         garage.addCar(new DieselCar("RT15684", "VW", "Golf", 1999, 3, false, 10));
         garage.addCar(new ElectricCar("BM25786", "Tesla","Model S", 2017, 5, 100, 560,184));
 
-        System.out.println(garage.toString());
+        System.out.println(garage);
         System.out.println("The total green tax is: " + garage.calcGarageGreenTax()+"\n");
-        
+
     }
 }
