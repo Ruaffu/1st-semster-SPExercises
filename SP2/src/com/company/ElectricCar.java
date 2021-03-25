@@ -1,13 +1,13 @@
 package com.company;
 
 public class ElectricCar extends Car{
-    int BatteryCapKWh;
-    int maxKm;
-    int whPrKm;
+    private int BatteryCapKWh;
+    private int maxKm;
+    private int whPrKm;
 
 
-    public ElectricCar(String regNr, String make, String model, int year, int doors, int batteryCapKWh, int maxKm, int whPrKm) {
-        super(regNr, make, model, year, doors);
+    public ElectricCar(String regNr, String make, String model, int year, int numDoors, int batteryCapKWh, int maxKm, int whPrKm) {
+        super(regNr, make, model, year, numDoors);
         this.BatteryCapKWh = batteryCapKWh;
         this.maxKm = maxKm;
         this.whPrKm = whPrKm;
@@ -40,6 +40,10 @@ public class ElectricCar extends Car{
     @Override
     public String toString() {
         return "Electric Car: " + '\n' +
+                "Registration: " + getRegNr() + '\n' +
+                "Make: " + getMake() + '\n' +
+                "Model: " + getModel() + '\n' +
+                "Year: " + getYear() + '\n' +
                 "Battery capacity in Kwh is: " + BatteryCapKWh + '\n' +
                 "max range in Km: " + maxKm + '\n' +
                 "Watts hour per km: " + whPrKm + '\n';
@@ -69,6 +73,6 @@ public class ElectricCar extends Car{
         {
             return 10470.0;
         }
-        return -1;
+        return 0;
     }
 }

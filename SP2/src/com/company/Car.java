@@ -5,14 +5,14 @@ public abstract class Car {
     private String make;
     private String model;
     private int year;
-    private int doors;
+    private int numDoors;
 
     public Car(String regNr, String make, String model, int year, int doors){
         this.regNr = regNr;
         this.make = make;
         this.model = model;
         this.year = year;
-        this.doors = doors;
+        this.numDoors = doors;
 
     }
 
@@ -50,12 +50,12 @@ public abstract class Car {
         this.year = year;
     }
 
-    public int getDoors() {
-        return doors;
+    public int getNumDoors() {
+        return numDoors;
     }
 
-    public void setDoors(int doors) {
-        this.doors = doors;
+    public void setNumDoors(int numDoors) {
+        this.numDoors = numDoors;
     }
 
     @Override
@@ -65,6 +65,6 @@ public abstract class Car {
                 "Make: " + make + '\n' +
                 "Model: " + model + '\n' +
                 "Year: " + year + '\n' +
-                "Number of doors: " + doors;
+                "Number of doors: " + numDoors;
     }
 }

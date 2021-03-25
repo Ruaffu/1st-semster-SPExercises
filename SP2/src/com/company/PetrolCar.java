@@ -4,8 +4,8 @@ public class PetrolCar extends Car{
     private int octaneRating;
     private int kmPrL;
 
-    public PetrolCar(String regNr, String make, String model, int year, int doors, int octaneRating, int kmPrL){
-        super(regNr,make, model, year, doors);
+    public PetrolCar(String regNr, String make, String model, int year, int numDoors, int octaneRating, int kmPrL){
+        super(regNr,make, model, year, numDoors);
         this.octaneRating = octaneRating;
         this.kmPrL = kmPrL;
     }
@@ -29,6 +29,10 @@ public class PetrolCar extends Car{
     @Override
     public String toString() {
         return "Petrol Car: " + '\n' +
+                "Registration: " + getRegNr() + '\n' +
+                "Make: " + getMake() + '\n' +
+                "Model: " + getModel() + '\n' +
+                "Year: " + getYear() + '\n' +
                 "The octane rating is: " + octaneRating + '\n' +
                 "km per liter is: " + kmPrL + '\n';
     }
@@ -55,6 +59,6 @@ public class PetrolCar extends Car{
             return 10470.0;
         }
 
-        return -1;
+        return 0;
     }
 }
